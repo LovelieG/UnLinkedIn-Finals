@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "26f841e3-45b1-4b5f-a0a0-4852a62bc82f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25671937"
+	},
+	"item": [
+		{
+			"name": "Create Employee First Before Job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"Ma. Lovelie2567\",\r\n    \"lastname\":\"Gaspar\",\r\n    \"username\":\"lovelieG123\",\r\n    \"password\":\"02102003\",\r\n    \"employeeCompany\":\"GalitSakin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/employee/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Resume",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"AldrinJan1\",\r\n    \"lastname\": \"Quitalig\",\r\n    \"birthdate\": \"1997-10-13\",\r\n    \"contactnumber\": \"09457048035\",\r\n    \"gender\": \"Male\",\r\n    \"course\": \"BSIT\",\r\n    \"university\": \"CEU\",\r\n    \"email\":\"aldrin_quitalig1213@gmail.com\",\r\n    \"password\":\"test\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/resume/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Janitor\",\r\n    \"description\": \"Cleaning toilets\",\r\n    \"slots\": 5,\r\n    \"empid\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/job/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Staples application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job_id\": 2,\r\n    \"resume_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/application/add"
+			},
+			"response": []
+		},
+		{
+			"name": "Login Applicant/Resume",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"aldrin_quitalig12@gmail.com\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/resume/login"
+			},
+			"response": []
+		},
+		{
+			"name": "View type of job",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/resume/view/job-type/jan"
+			},
+			"response": []
+		},
+		{
+			"name": "View Company",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/resume/view/company/GalitSakin"
+			},
+			"response": []
+		},
+		{
+			"name": "View All Applicants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/application/view/all"
+			},
+			"response": []
+		},
+		{
+			"name": "View All Resume",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/resume/view/all"
+			},
+			"response": []
+		},
+		{
+			"name": "Employee Log In",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"lovelieG123\",\r\n    \"password\":\"021020032\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/employee/login"
+			},
+			"response": []
+		},
+		{
+			"name": "View  Application by OJT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/resume/view/applied-job/AldrinJan"
+			},
+			"response": []
+		},
+		{
+			"name": "View resume By Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/employee/view/course/BSIT"
+			},
+			"response": []
+		},
+		{
+			"name": "View Job",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/job/view/all"
+			},
+			"response": []
+		},
+		{
+			"name": "View job by Company",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/resume/view/job/company/GalitSakin"
+			},
+			"response": []
+		},
+		{
+			"name": "Process Application",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"is_approved\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/application/process/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"old_password\":\"02102003\",\r\n    \"new_password\":\"nerodante\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/employee/update-password/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Resume",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"last_name\":\"\",\r\n    \"email\":\"\",\r\n    \"contact_number\":\"asd\",\r\n    \"course\":\"\",\r\n    \"university\":\"\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/resume/update/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee Details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"last_name\":\"\",\r\n    \"change_company\":\"Jabiii\",\r\n    \"password\":\"02102003\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/employee/update-employee/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Job Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"description\": \"Dancer\",\r\n    \"slots\": 69\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/job/update/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Application First",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/application/delete/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Then Delete Job",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/job/delete/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Then Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/employee/delete/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Resume",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/resume/delete/1"
+			},
+			"response": []
+		}
+	]
+}
